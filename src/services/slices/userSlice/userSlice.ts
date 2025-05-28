@@ -41,39 +41,119 @@ export const initialState: TUserState = {
 // AsyncThunk для регистрации
 export const registerUser = createAsyncThunk(
   'user/regUser',
-  async (registerData: TRegisterData) => await registerUserApi(registerData)
+  async (registerData: TRegisterData, thunkAPI) => {
+    try {
+      const response = await registerUserApi(registerData);
+      if (!response || !response.success) {
+        return thunkAPI.rejectWithValue('Регистрация не удалась');
+      }
+      return response;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        (error as Error).message || 'Ошибка регистрации'
+      );
+    }
+  }
 );
 
 // AsyncThunk для логина
 export const loginUser = createAsyncThunk(
   'user/loginUser',
-  async ({ email, password }: TLoginData) => {
-    const data = await loginUserApi({ email, password });
-    if (!data.success) {
+  async ({ email, password }: TLoginData, thunkAPI) => {
+    try {
+      const data = await loginUserApi({ email, password });
+
+      if (!data.success) {
+        return thunkAPI.rejectWithValue(
+          'Ошибка авторизации: неверный логин или пароль'
+        );
+      }
+
+      // установка токенов если они есть
+      if (data.accessToken) setCookie('accessToken', data.accessToken);
+      if (data.refreshToken)
+        localStorage.setItem('refreshToken', data.refreshToken);
+
       return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error instanceof Error
+          ? error.message
+          : 'Неизвестная ошибка при авторизации'
+      );
     }
-    // Устанавливаем токены
-    setCookie('accessToken', data.accessToken);
-    localStorage.setItem('refreshToken', data.refreshToken);
-    return data;
   }
 );
 
-export const getUser = createAsyncThunk('user/getUser', getUserApi);
+export const getUser = createAsyncThunk('user/getUser', async (_, thunkAPI) => {
+  try {
+    const user = await getUserApi();
+    if (!user) {
+      return thunkAPI.rejectWithValue(
+        'Не удалось получить данные пользователя'
+      );
+    }
+    return user;
+  } catch (error) {
+    return thunkAPI.rejectWithValue(
+      (error as Error).message || 'Ошибка получения данных пользователя'
+    );
+  }
+});
 
-export const getOrdersAll = createAsyncThunk('user/ordersUser', getOrdersApi);
-
+export const getOrdersAll = createAsyncThunk(
+  'user/ordersUser',
+  async (_, thunkAPI) => {
+    try {
+      const orders = await getOrdersApi();
+      if (!orders) {
+        return thunkAPI.rejectWithValue(
+          'Не удалось получить заказы пользователя'
+        );
+      }
+      return orders;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        (error as Error).message || 'Ошибка получения заказов'
+      );
+    }
+  }
+);
 export const updateUser = createAsyncThunk(
   'user/updateUser',
-  async (data: Partial<TRegisterData>) => updateUserApi(data)
+  async (data: Partial<TRegisterData>, thunkAPI) => {
+    try {
+      const updatedUser = await updateUserApi(data);
+      if (!updatedUser) {
+        return thunkAPI.rejectWithValue(
+          'Не удалось обновить данные пользователя'
+        );
+      }
+      return updatedUser;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        (error as Error).message || 'Ошибка обновления пользователя'
+      );
+    }
+  }
 );
 
 // AsyncThunk для выхода пользователя
-export const logoutUser = createAsyncThunk('user/logoutUser', async () => {
-  await logoutApi();
-  localStorage.clear();
-  deleteCookie('accessToken');
-});
+export const logoutUser = createAsyncThunk(
+  'user/logoutUser',
+  async (_, thunkAPI) => {
+    try {
+      await logoutApi();
+      localStorage.clear();
+      deleteCookie('accessToken');
+      return true;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        (error as Error).message || 'Ошибка выхода'
+      );
+    }
+  }
+);
 
 // Создание userSlice
 export const userSlice = createSlice({
