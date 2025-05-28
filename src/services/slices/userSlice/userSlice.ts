@@ -1,10 +1,8 @@
-// Импорт типов и API-функций
 import {
   TRegisterData,
   loginUserApi,
   TLoginData,
   getUserApi,
-  TAuthResponse,
   getOrdersApi,
   logoutApi,
   updateUserApi,
@@ -16,22 +14,22 @@ import { TOrder, TUser } from '@utils-types';
 
 // Тип состояния пользователя
 type TUserState = {
-  request: boolean; // Индикатор общего запроса
-  error: string | null; // Сообщение об ошибке
-  response: TUser | null; // Ответ от API (например, после регистрации/обновления)
-  registerData: TRegisterData | null; // Зарегистрированные данные (не используется напрямую)
-  userData: TUser | null; // Данные текущего пользователя
-  isAuthChecked: boolean; // Проверена ли авторизация
-  isAuthenticated: boolean; // Пользователь аутентифицирован?
-  loginUserRequest: boolean; // Флаг, что идёт запрос логина
-  userOrders: TOrder[]; // Список заказов пользователя
+  isLoading: boolean;
+  errorMessage: string | null;
+  userResponse: TUser | null;
+  registerData: TRegisterData | null;
+  userData: TUser | null;
+  isAuthChecked: boolean;
+  isAuthenticated: boolean;
+  loginUserRequest: boolean;
+  userOrders: TOrder[];
 };
 
 // Начальное состояние
 export const initialState: TUserState = {
-  request: false,
-  error: null,
-  response: null,
+  isLoading: false,
+  errorMessage: null,
+  userResponse: null,
   registerData: null,
   userData: null,
   isAuthChecked: false,
@@ -52,7 +50,7 @@ export const loginUser = createAsyncThunk(
   async ({ email, password }: TLoginData) => {
     const data = await loginUserApi({ email, password });
     if (!data.success) {
-      return data; // Вернётся в fulfilled, но с success = false
+      return data;
     }
     // Устанавливаем токены
     setCookie('accessToken', data.accessToken);
@@ -61,13 +59,10 @@ export const loginUser = createAsyncThunk(
   }
 );
 
-// AsyncThunk для получения пользователя
 export const getUser = createAsyncThunk('user/getUser', getUserApi);
 
-// AsyncThunk для получения заказов пользователя
 export const getOrdersAll = createAsyncThunk('user/ordersUser', getOrdersApi);
 
-// AsyncThunk для обновления данных пользователя
 export const updateUser = createAsyncThunk(
   'user/updateUser',
   async (data: Partial<TRegisterData>) => updateUserApi(data)
@@ -75,7 +70,6 @@ export const updateUser = createAsyncThunk(
 
 // AsyncThunk для выхода пользователя
 export const logoutUser = createAsyncThunk('user/logoutUser', async () => {
-  // Очищаем данные при логауте
   await logoutApi();
   localStorage.clear();
   deleteCookie('accessToken');
@@ -86,39 +80,35 @@ export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    // Сброс данных при выходе
     userLogout: (state) => {
       state.userData = null;
     },
-    // Сброс ошибки
     resetError: (state) => {
-      state.error = null;
+      state.errorMessage = null;
     }
   },
   selectors: {
-    // Селектор всего состояния пользователя
     getUserState: (state) => state,
-    // Селектор ошибки
-    getError: (state) => state.error
+    getError: (state) => state.errorMessage
   },
   extraReducers: (builder) => {
     builder
       // Регистрация
       .addCase(registerUser.pending, (state) => {
-        state.request = true;
-        state.error = null;
+        state.isLoading = true;
+        state.errorMessage = null;
         state.isAuthChecked = true;
         state.isAuthenticated = false;
       })
       .addCase(registerUser.rejected, (state, action) => {
-        state.request = false;
-        state.error = action.error.message as string;
+        state.isLoading = false;
+        state.errorMessage = action.error.message as string;
         state.isAuthChecked = false;
       })
       .addCase(registerUser.fulfilled, (state, action) => {
-        state.request = false;
-        state.error = null;
-        state.response = action.payload.user;
+        state.isLoading = false;
+        state.errorMessage = null;
+        state.userResponse = action.payload.user;
         state.userData = action.payload.user;
         state.isAuthChecked = false;
         state.isAuthenticated = true;
@@ -127,17 +117,17 @@ export const userSlice = createSlice({
       // Логин
       .addCase(loginUser.pending, (state) => {
         state.loginUserRequest = true;
-        state.error = null;
+        state.errorMessage = null;
         state.isAuthChecked = true;
         state.isAuthenticated = false;
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.loginUserRequest = false;
         state.isAuthChecked = false;
-        state.error = action.error.message as string;
+        state.errorMessage = action.error.message as string;
       })
       .addCase(loginUser.fulfilled, (state, action) => {
-        state.error = null;
+        state.errorMessage = null;
         state.loginUserRequest = false;
         state.isAuthChecked = false;
         state.isAuthenticated = true;
@@ -164,53 +154,52 @@ export const userSlice = createSlice({
 
       // Обновление пользователя
       .addCase(updateUser.pending, (state) => {
-        state.request = true;
-        state.error = null;
+        state.isLoading = true;
+        state.errorMessage = null;
       })
       .addCase(updateUser.rejected, (state, action) => {
-        state.request = false;
-        state.error = action.error.message as string;
+        state.isLoading = false;
+        state.errorMessage = action.error.message as string;
       })
       .addCase(updateUser.fulfilled, (state, action) => {
-        state.request = false;
-        state.error = null;
-        state.response = action.payload.user;
+        state.isLoading = false;
+        state.errorMessage = null;
+        state.userResponse = action.payload.user;
       })
 
       // Логаут
       .addCase(logoutUser.pending, (state) => {
         state.isAuthenticated = true;
         state.isAuthChecked = true;
-        state.error = null;
-        state.request = true;
+        state.errorMessage = null;
+        state.isLoading = true;
       })
       .addCase(logoutUser.rejected, (state, action) => {
         state.isAuthenticated = true;
         state.isAuthChecked = false;
-        state.error = action.error.message as string;
-        state.request = false;
+        state.errorMessage = action.error.message as string;
+        state.isLoading = false;
       })
       .addCase(logoutUser.fulfilled, (state) => {
         state.isAuthenticated = false;
         state.isAuthChecked = false;
-        state.error = null;
-        state.request = false;
+        state.errorMessage = null;
+        state.isLoading = false;
         state.userData = null;
-        // Данные уже очищаются в thunk
       })
 
       // Заказы пользователя
       .addCase(getOrdersAll.pending, (state) => {
-        state.error = null;
-        state.request = true;
+        state.errorMessage = null;
+        state.isLoading = true;
       })
       .addCase(getOrdersAll.rejected, (state, action) => {
-        state.error = action.error.message as string;
-        state.request = false;
+        state.errorMessage = action.error.message as string;
+        state.isLoading = false;
       })
       .addCase(getOrdersAll.fulfilled, (state, action) => {
-        state.error = null;
-        state.request = false;
+        state.errorMessage = null;
+        state.isLoading = false;
         state.userOrders = action.payload;
       });
   }

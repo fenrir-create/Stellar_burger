@@ -10,7 +10,7 @@ import { Preloader } from '@ui';
 
 export const Profile: FC = () => {
   const data = useSelector(getUserState).userData;
-  const loading = useSelector(getUserState).request;
+  const loading = useSelector(getUserState).isLoading;
   const dispatch = useDispatch();
 
   const user = {

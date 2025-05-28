@@ -1,63 +1,79 @@
-// Импорт API-функции для получения заказа по номеру
 import { getOrderByNumberApi } from '../../../utils/burger-api';
-// Импорт функций для создания async-thunk и среза (slice) Redux Toolkit
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-// Тип данных заказа
 import { TOrder } from '@utils-types';
 
 // Тип состояния для работы с заказами
 type TOrderState = {
-  orders: TOrder[]; // массив заказов (не используется в этом слайсе, но зарезервировано)
-  orderByNumberResponse: TOrder | null; // результат запроса заказа по номеру
-  request: boolean; // индикатор выполнения запроса
-  responseOrder: null; // устаревшее/неиспользуемое поле, можно удалить
-  error: string | null; // сообщение об ошибке
+  orderList: TOrder[];
+  orderByNumberResponse: TOrder | null;
+  request: boolean;
+  responseOrder: null;
+  errorMessage: string | null;
 };
 
 // Начальное состояние среза
 export const initialState: TOrderState = {
-  orders: [],
+  orderList: [],
   orderByNumberResponse: null,
   request: false,
   responseOrder: null,
-  error: null
+  errorMessage: null
 };
 
 // AsyncThunk для запроса заказа по его номеру
 export const getOrderByNumber = createAsyncThunk(
-  'order/byNumber', // имя action
-  async (number: number) => getOrderByNumberApi(number) // функция запроса к API
+  'order/byNumber',
+  async (number: number, { rejectWithValue }) => {
+    try {
+      // Проверка входного значения
+      if (typeof number !== 'number' || number <= 0) {
+        return rejectWithValue('Некорректный номер заказа');
+      }
+
+      const response = await getOrderByNumberApi(number);
+
+      // Проверка успешности ответа
+      if (
+        !response ||
+        !Array.isArray(response.orders) ||
+        response.orders.length === 0
+      ) {
+        return rejectWithValue('Заказ не найден');
+      }
+
+      return response;
+    } catch (error: any) {
+      return rejectWithValue(error.message || 'Ошибка при загрузке заказа');
+    }
+  }
 );
 
 // Создание Redux-среза для заказов
 export const orderSlice = createSlice({
-  name: 'order', // имя среза
-  initialState, // начальное состояние
-  reducers: {}, // обычные редьюсеры не используются
+  name: 'order',
+  initialState,
+  reducers: {},
 
   // Селектор состояния для использования в компонентах
   selectors: {
-    getOrderState: (state) => state // возвращает весь state среза
+    getOrderState: (state) => state
   },
 
   // Обработка дополнительных action (в т.ч. asyncThunk)
   extraReducers: (builder) => {
     builder
-      // При отправке запроса: сбрасываем ошибку, отмечаем что идёт загрузка
       .addCase(getOrderByNumber.pending, (state) => {
-        state.error = null;
+        state.errorMessage = null;
         state.request = true;
       })
-      // При ошибке запроса: сохраняем ошибку, сбрасываем индикатор загрузки
       .addCase(getOrderByNumber.rejected, (state, action) => {
-        state.error = action.error.message as string;
+        state.errorMessage = action.error.message as string;
         state.request = false;
       })
-      // При успешном ответе: сохраняем заказ, сбрасываем флаг загрузки
       .addCase(getOrderByNumber.fulfilled, (state, action) => {
-        state.error = null;
+        state.errorMessage = null;
         state.request = false;
-        state.orderByNumberResponse = action.payload.orders[0]; // получаем первый заказ из массива
+        state.orderByNumberResponse = action.payload.orders[0];
       });
   }
 });

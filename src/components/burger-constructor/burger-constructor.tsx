@@ -13,7 +13,7 @@ import { getUserState } from '../../services/slices/userSlice/userSlice';
 
 export const BurgerConstructor: FC = () => {
   const navigate = useNavigate();
-  const { constructorItems, orderModalData, orderRequest } =
+  const { constructorItems, orderData, orderRequest } =
     useSelector(getConstructorState);
   const isAuth = useSelector(getUserState).isAuthenticated;
 
@@ -58,7 +58,7 @@ export const BurgerConstructor: FC = () => {
       price={price}
       orderRequest={orderRequest}
       constructorItems={constructorItems}
-      orderModalData={orderModalData}
+      orderModalData={orderData}
       onOrderClick={onOrderClick}
       closeOrderModal={closeOrderModal}
     />
