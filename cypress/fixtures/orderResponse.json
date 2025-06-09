@@ -1,32 +1,77 @@
 {
   "success": true,
-  "name": "Флюоресцентный люминесцентный био-марсианский бургер",
+  "name": "Космический минерал-бургер с шипами",
   "order": {
-    "createdAt": "2024-04-20T13:29:40.782Z",
-    "ingredients": {
-      "calories": 643,
-      "carbohydrates": 85,
-      "fat": 26,
-      "image": "https://code.s3.yandex.net/react/code/bun-01.png",
-      "image_large": "https://code.s3.yandex.net/react/code/bun-01-large.png",
-      "image_mobile": "https://code.s3.yandex.net/react/code/bun-01-mobile.png",
-      "name": "Флюоресцентная булка R2-D3",
-      "price": 988,
-      "proteins": 44,
-      "type": "bun",
-      "_id": "643d69a5c3f7b9001cfa093d"
-    },
-    "_id": "6623c34497ede0001d066c4b",
-    "name": "Флюоресцентный люминесцентный био-марсианский бургер",
-    "number": 38483,
+    "ingredients": [
+      {
+        "_id": "643d69a5c3f7b9001cfa093d",
+        "name": "Флюоресцентная булка R2-D3",
+        "type": "bun",
+        "proteins": 44,
+        "fat": 26,
+        "carbohydrates": 85,
+        "calories": 643,
+        "price": 988,
+        "image": "https://code.s3.yandex.net/react/code/bun-01.png",
+        "image_mobile": "https://code.s3.yandex.net/react/code/bun-01-mobile.png",
+        "image_large": "https://code.s3.yandex.net/react/code/bun-01-large.png",
+        "__v": 0
+      },
+      {
+        "_id": "643d69a5c3f7b9001cfa0946",
+        "name": "Хрустящие минеральные кольца",
+        "type": "main",
+        "proteins": 808,
+        "fat": 689,
+        "carbohydrates": 609,
+        "calories": 986,
+        "price": 300,
+        "image": "https://code.s3.yandex.net/react/code/mineral_rings.png",
+        "image_mobile": "https://code.s3.yandex.net/react/code/mineral_rings-mobile.png",
+        "image_large": "https://code.s3.yandex.net/react/code/mineral_rings-large.png",
+        "__v": 0
+      },
+      {
+        "_id": "643d69a5c3f7b9001cfa0945",
+        "name": "Соус с шипами Антарианского плоскоходца",
+        "type": "sauce",
+        "proteins": 101,
+        "fat": 99,
+        "carbohydrates": 100,
+        "calories": 100,
+        "price": 88,
+        "image": "https://code.s3.yandex.net/react/code/sauce-01.png",
+        "image_mobile": "https://code.s3.yandex.net/react/code/sauce-01-mobile.png",
+        "image_large": "https://code.s3.yandex.net/react/code/sauce-01-large.png",
+        "__v": 0
+      },
+      {
+        "_id": "643d69a5c3f7b9001cfa093d",
+        "name": "Флюоресцентная булка R2-D3",
+        "type": "bun",
+        "proteins": 44,
+        "fat": 26,
+        "carbohydrates": 85,
+        "calories": 643,
+        "price": 988,
+        "image": "https://code.s3.yandex.net/react/code/bun-01.png",
+        "image_mobile": "https://code.s3.yandex.net/react/code/bun-01-mobile.png",
+        "image_large": "https://code.s3.yandex.net/react/code/bun-01-large.png",
+        "__v": 0
+      }
+    ],
+    "_id": "6624f51097ede0001d088123",
     "owner": {
-      "email": "nigilen@gmail.com",
-      "name": "Nikola",
-      "createdAt": "2024-04-03T12:09:44.278Z",
-      "updatedAt": "2024-04-12T12:06:09.411Z"
+      "name": "someName",
+      "email": "someEmail@megaEmail.ru",
+      "createdAt": "2025-05-01T10:00:00.000Z",
+      "updatedAt": "2025-06-01T10:00:00.000Z"
     },
-    "price": 3388,
     "status": "done",
-    "updatedAt": "2024-04-20T13:29:41.415Z"
+    "name": "Космический минерал-бургер с шипами",
+    "createdAt": "2025-06-08T12:00:00.000Z",
+    "updatedAt": "2025-06-08T12:00:01.000Z",
+    "number": 888999,
+    "price": 2364
   }
 }

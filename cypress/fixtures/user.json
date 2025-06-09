@@ -3,7 +3,7 @@
   "accessToken": "lorem",
   "refreshToken": "ipsum",
   "user": {
-    "email": "mainbum@oldbumbarbershop.ru",
-    "name": "OldBum"
+    "email": "someName@someEmail.ru",
+    "name": "someName"
   }
 }
