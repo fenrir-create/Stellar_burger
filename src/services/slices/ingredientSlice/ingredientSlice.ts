@@ -1,58 +1,64 @@
-// Импорт API-функции для получения ингредиентов
 import { getIngredientsApi } from '../../../utils/burger-api';
-// Импорт функций из Redux Toolkit для создания асинхронных экшенов и слайса
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-// Импорт типа данных для ингредиента
 import { TIngredient } from '@utils-types';
 
-// Определение типа состояния для ингредиентов
 export type TIngredientState = {
-  ingredients: TIngredient[]; // список ингредиентов
-  loading: boolean; // индикатор загрузки
-  error: string | null; // сообщение об ошибке, если есть
+  ingredients: TIngredient[];
+  isLoading: boolean;
+  errorMessage: string | null;
 };
 
-// Начальное состояние для ингредиентов
 export const initialState: TIngredientState = {
-  ingredients: [], // по умолчанию ингредиенты не загружены
-  loading: false, // загрузка не происходит
-  error: null // ошибки нет
+  ingredients: [],
+  isLoading: false,
+  errorMessage: null
 };
 
 // Создание асинхронного экшена для получения ингредиентов
-// Thunk автоматически обрабатывает состояния: pending, fulfilled и rejected
-export const getIngredients = createAsyncThunk(
-  'ingredient/get', // тип экшена
-  getIngredientsApi // функция, возвращающая Promise (наш API-запрос)
-);
+export const getIngredients = createAsyncThunk<
+  TIngredient[],
+  void,
+  { rejectValue: string }
+>('ingredient/get', async (_, thunkAPI) => {
+  try {
+    const response = await getIngredientsApi();
+
+    if (!Array.isArray(response)) {
+      return thunkAPI.rejectWithValue('Некорректные данные от API');
+    }
+
+    return response;
+  } catch (error) {
+    return thunkAPI.rejectWithValue((error as Error).message);
+  }
+});
 
 // Создание слайса Redux Toolkit для управления состоянием ингредиентов
 export const ingredientSlice = createSlice({
-  name: 'ingredient', // имя слайса
-  initialState, // начальное состояние
-  reducers: {}, // в данном случае не определены обычные редьюсеры
+  name: 'ingredient',
+  initialState,
+  reducers: {},
   selectors: {
     // Селектор для получения всего состояния слайса
     getIngredientState: (state) => state
   },
   extraReducers: (builder) => {
-    // Обработка состояний асинхронного экшена getIngredients
     builder
       // Состояние, когда запрос начался
       .addCase(getIngredients.pending, (state) => {
-        state.loading = true; // включаем индикатор загрузки
-        state.error = null; // очищаем предыдущие ошибки
+        state.isLoading = true;
+        state.errorMessage = null;
       })
       // Состояние, когда запрос завершился ошибкой
       .addCase(getIngredients.rejected, (state, action) => {
-        state.loading = false; // отключаем загрузку
-        state.error = action.error.message as string; // сохраняем сообщение об ошибке
+        state.isLoading = false;
+        state.errorMessage = action.error.message as string;
       })
       // Состояние, когда запрос завершился успешно
       .addCase(getIngredients.fulfilled, (state, action) => {
-        state.loading = false; // отключаем индикатор загрузки
-        state.error = null; // очищаем ошибки
-        state.ingredients = action.payload; // сохраняем полученные ингредиенты
+        state.isLoading = false;
+        state.errorMessage = null;
+        state.ingredients = action.payload;
       });
   }
 });

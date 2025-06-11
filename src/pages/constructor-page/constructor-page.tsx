@@ -8,7 +8,7 @@ import { useSelector } from '@store';
 import { getIngredientState } from '../../services/slices/ingredientSlice/ingredientSlice';
 
 export const ConstructorPage: FC = () => {
-  const isIngredientsLoading = useSelector(getIngredientState).loading;
+  const isIngredientsLoading = useSelector(getIngredientState).isLoading;
 
   return (
     <>

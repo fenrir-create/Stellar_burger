@@ -1,53 +1,73 @@
-// Импорт API-функции для оформления заказа
 import { orderBurgerApi } from '../../../utils/burger-api';
-// Импорт необходимых функций и типов из Redux Toolkit
 import {
   PayloadAction,
   createAsyncThunk,
   createSlice,
   nanoid
 } from '@reduxjs/toolkit';
-// Импорт пользовательских типов
 import { TConstructorIngredient, TIngredient, TOrder } from '@utils-types';
 
-// Тип состояния конструктора бургера
 export type TConsturctorState = {
-  loading: boolean; // индикатор загрузки
+  isLoading: boolean;
   constructorItems: {
-    bun: TConstructorIngredient | null; // выбранная булка
-    ingredients: TConstructorIngredient[]; // выбранные начинки
+    bun: TConstructorIngredient | null;
+    ingredients: TConstructorIngredient[];
   };
-  orderRequest: boolean; // индикатор запроса на оформление заказа
-  orderModalData: TOrder | null; // данные заказа для отображения в модальном окне
-  error: string | null; // сообщение об ошибке
+  orderRequest: boolean;
+  orderData: TOrder | null;
+  errorMessage: string | null;
 };
 
 // Начальное состояние
 export const initialState: TConsturctorState = {
-  loading: false,
+  isLoading: false,
   constructorItems: {
     bun: null,
     ingredients: []
   },
   orderRequest: false,
-  orderModalData: null,
-  error: null
+  orderData: null,
+  errorMessage: null
 };
 
 // Асинхронный thunk для оформления заказа
 export const orderBurger = createAsyncThunk(
-  'user/order', // тип действия
-  async (
-    data: string[] // payload — массив id ингредиентов
-  ) => orderBurgerApi(data) // вызов API
+  'user/order',
+  async (data: string[], thunkAPI) => {
+    try {
+      // Проверка: data должен быть массивом непустых строк
+      if (
+        !Array.isArray(data) ||
+        data.length === 0 ||
+        !data.every((id) => typeof id === 'string' && id.trim() !== '')
+      ) {
+        return thunkAPI.rejectWithValue(
+          'Некорректные данные для оформления заказа'
+        );
+      }
+
+      const response = await orderBurgerApi(data);
+
+      // Проверка ответа API
+      if (!response || !response.success) {
+        return thunkAPI.rejectWithValue(
+          'Не удалось оформить заказ. Попробуйте позже.'
+        );
+      }
+
+      return response;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        (error as Error).message || 'Произошла ошибка при оформлении заказа'
+      );
+    }
+  }
 );
 
-// Создание слайса Redux Toolkit
 export const constructorSlice = createSlice({
-  name: 'constructorBurger', // имя слайса
-  initialState, // начальное состояние
+  name: 'constructorBurger',
+  initialState,
   selectors: {
-    // Селектор для получения всего состояния конструктора
     getConstructorState: (state) => state
   },
   reducers: {
@@ -55,15 +75,12 @@ export const constructorSlice = createSlice({
     addIngredient: {
       reducer: (state, action: PayloadAction<TConstructorIngredient>) => {
         if (action.payload.type === 'bun') {
-          // Если тип ингредиента — булка, заменяем текущую
           state.constructorItems.bun = action.payload;
         } else {
-          // Иначе добавляем как обычный ингредиент
           state.constructorItems.ingredients.push(action.payload);
         }
       },
       prepare: (ingredient: TIngredient) => {
-        // Генерация уникального id при добавлении ингредиента
         const id = nanoid();
         return { payload: { ...ingredient, id } };
       }
@@ -80,59 +97,53 @@ export const constructorSlice = createSlice({
     // Перемещение ингредиента вверх в списке
     moveIngredientUp: (state, action: PayloadAction<number>) => {
       state.constructorItems.ingredients.splice(
-        action.payload, // позиция, куда вставляем
+        action.payload,
         0,
-        state.constructorItems.ingredients.splice(action.payload - 1, 1)[0] // вырезаем и вставляем выше
+        state.constructorItems.ingredients.splice(action.payload - 1, 1)[0]
       );
     },
 
     // Перемещение ингредиента вниз в списке
     moveIngredientDown: (state, action: PayloadAction<number>) => {
       state.constructorItems.ingredients.splice(
-        action.payload, // позиция, куда вставляем
+        action.payload,
         0,
-        state.constructorItems.ingredients.splice(action.payload + 1, 1)[0] // вырезаем и вставляем ниже
+        state.constructorItems.ingredients.splice(action.payload + 1, 1)[0]
       );
     },
 
-    // Установка флага запроса на оформление заказа вручную (если нужно)
     setRequest: (state, action) => {
       state.orderRequest = action.payload;
     },
 
-    // Сброс данных модального окна после закрытия
     resetModal: (state) => {
-      state.orderModalData = null;
+      state.orderData = null;
     }
   },
 
   // Обработка состояний асинхронного экшена orderBurger
   extraReducers: (builder) => {
     builder
-      // Заказ отправляется
       .addCase(orderBurger.pending, (state, action) => {
-        state.loading = true;
+        state.isLoading = true;
         state.orderRequest = true;
-        state.error = null;
+        state.errorMessage = null;
       })
-      // Ошибка при оформлении заказа
       .addCase(orderBurger.rejected, (state, action) => {
-        state.loading = false;
+        state.isLoading = false;
         state.orderRequest = false;
-        state.error = action.error.message as string;
+        state.errorMessage = action.error.message as string;
       })
-      // Заказ успешно оформлен
       .addCase(orderBurger.fulfilled, (state, action) => {
-        state.loading = false;
+        state.isLoading = false;
         state.orderRequest = false;
-        state.error = null;
-        state.orderModalData = action.payload.order; // сохраняем данные заказа
-        // Очищаем конструктор после успешного заказа
+        state.errorMessage = null;
+        state.orderData = action.payload.order;
         state.constructorItems = {
           bun: null,
           ingredients: []
         };
-        console.log(action.payload); // отладочный вывод
+        console.log(action.payload);
       });
   }
 });

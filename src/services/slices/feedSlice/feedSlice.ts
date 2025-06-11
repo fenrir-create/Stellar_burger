@@ -3,23 +3,50 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { TOrder } from '@utils-types';
 
 type TFeedState = {
-  orders: TOrder[];
-  total: number;
-  totalToday: number;
-  loading: boolean;
-  error: string | null;
+  items: TOrder[];
+  totalCount: number;
+  todayCount: number;
+  isLoading: boolean;
+  errorMessage: string | null;
 };
 
 export const initialState: TFeedState = {
-  orders: [],
-  total: 0,
-  totalToday: 0,
-  loading: false,
-  error: null
+  items: [],
+  totalCount: 0,
+  todayCount: 0,
+  isLoading: false,
+  errorMessage: null
+};
+// Явно указываем, какие данные вернёт thunk
+type TFeedsResponse = {
+  orders: TOrder[];
+  total: number;
+  totalToday: number;
 };
 
-export const getFeeds = createAsyncThunk('feeds/all', getFeedsApi);
+export const getFeeds = createAsyncThunk<TFeedsResponse, void>(
+  'feeds/all',
+  async (_, thunkAPI) => {
+    try {
+      const response = await getFeedsApi();
 
+      if (
+        !response ||
+        !Array.isArray(response.orders) ||
+        typeof response.total !== 'number' ||
+        typeof response.totalToday !== 'number'
+      ) {
+        return thunkAPI.rejectWithValue('Неверный формат ответа от API');
+      }
+
+      return response;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        (error as Error).message || 'Ошибка при получении ленты заказов'
+      );
+    }
+  }
+);
 export const feedSlice = createSlice({
   name: 'feed',
   initialState,
@@ -30,19 +57,19 @@ export const feedSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getFeeds.pending, (state) => {
-        state.loading = true;
-        state.error = null;
+        state.isLoading = true;
+        state.errorMessage = null;
       })
       .addCase(getFeeds.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message as string;
+        state.isLoading = false;
+        state.errorMessage = action.error.message as string;
       })
       .addCase(getFeeds.fulfilled, (state, action) => {
-        state.loading = false;
-        state.error = null;
-        state.orders = action.payload.orders;
-        state.total = action.payload.total;
-        state.totalToday = action.payload.totalToday;
+        state.isLoading = false;
+        state.errorMessage = null;
+        state.items = action.payload.orders;
+        state.totalCount = action.payload.total;
+        state.todayCount = action.payload.totalToday;
       });
   }
 });
