@@ -4,7 +4,8 @@ const SELECTORS = {
   altBun: `[data-cy="643d69a5c3f7b9001cfa093d"]`,
   filling: `[data-cy="643d69a5c3f7b9001cfa0941"]`,
   orderBtn: `[data-cy="order-button"]`,
-  overlay: `[data-cy='overlay']`
+  overlay: `[data-cy='overlay']`,
+  constructor: `[data-cy="constructor"]`
 };
 
 beforeEach(() => {
@@ -43,6 +44,7 @@ context('Ингредиенты и конструктор', () => {
     cy.get(SELECTORS.altBun).find('button').click();
     cy.get(SELECTORS.constructor).should('contain.text', 'верх');
     cy.get(SELECTORS.constructor).should('contain.text', 'низ');
+    cy.get(SELECTORS.constructor).should('contain.text', 'Флюоресцентная булка R2-D3'); // проверка альтернативной булки
   });
 
   it('Замена булки при наличии начинки работает', () => {
