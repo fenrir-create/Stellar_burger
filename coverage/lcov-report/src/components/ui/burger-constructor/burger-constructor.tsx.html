@@ -25,21 +25,21 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">91.66% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>11/12</span>
+                <span class='fraction'>20/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -169,7 +169,8 @@
 <a name='L104'></a><a href='#L104'>104</a>
 <a name='L105'></a><a href='#L105'>105</a>
 <a name='L106'></a><a href='#L106'>106</a>
-<a name='L107'></a><a href='#L107'>107</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -181,7 +182,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">140x</span>
+<span class="cline-any cline-yes">260x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -189,15 +190,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1622x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3040x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -211,7 +204,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">112x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">210x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -295,9 +297,9 @@ export const BurgerConstructorUI: FC&lt;BurgerConstructorUIProps&gt; = ({
   onOrderClick,
   closeOrderModal
 }) =&gt; (
-  &lt;section className={styles.burger_constructor}&gt;
+  &lt;section className={styles.burger_constructor} data-cy='constructor'&gt;
     {constructorItems.bun ? (
-      &lt;div className={`${styles.element} mb-4 mr-4`}&gt;
+      &lt;div className={`${styles.element} mb-4 mr-4`} data-cy='bun-top'&gt;
         &lt;ConstructorElement
           type='top'
           isLocked
@@ -328,13 +330,14 @@ export const BurgerConstructorUI: FC&lt;BurgerConstructorUIProps&gt; = ({
       ) : (
         &lt;div
           className={`${styles.noBuns} ml-8 mb-4 mr-5 text text_type_main-default`}
+          data-cy='empty-filling'
         &gt;
           Выберите начинку
         &lt;/div&gt;
       )}
     &lt;/ul&gt;
     {constructorItems.bun ? (
-      &lt;div className={`${styles.element} mt-4 mr-4`}&gt;
+      &lt;div className={`${styles.element} mt-4 mr-4`} data-cy='bun-bottom'&gt;
         &lt;ConstructorElement
           type='bottom'
           isLocked
@@ -374,7 +377,7 @@ export const BurgerConstructorUI: FC&lt;BurgerConstructorUIProps&gt; = ({
     {orderModalData &amp;&amp; (
       &lt;Modal
         onClose={closeOrderModal}
-        title={orderRequest ? <span class="branch-0 cbranch-no" title="branch not covered" >'Оформляем заказ...' </span>: ''}
+        title={orderRequest ? 'Оформляем заказ...' : ''}
       &gt;
         &lt;OrderDetailsUI orderNumber={orderModalData.number} /&gt;
       &lt;/Modal&gt;
@@ -388,7 +391,7 @@ export const BurgerConstructorUI: FC&lt;BurgerConstructorUIProps&gt; = ({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-06-09T11:40:17.279Z
+                at 2025-06-11T09:56:42.835Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1749469217422" clover="3.2.0">
-  <project timestamp="1749469217422" name="All files">
-    <metrics statements="701" coveredstatements="279" conditionals="275" coveredconditionals="74" methods="232" coveredmethods="76" elements="1208" coveredelements="429" complexity="0" loc="701" ncloc="701" packages="64" files="114" classes="114"/>
+<coverage generated="1749635803084" clover="3.2.0">
+  <project timestamp="1749635803085" name="All files">
+    <metrics statements="701" coveredstatements="282" conditionals="283" coveredconditionals="84" methods="233" coveredmethods="79" elements="1217" coveredelements="445" complexity="0" loc="701" ncloc="701" packages="64" files="114" classes="114"/>
     <package name="src">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\index.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="8" count="140" type="stmt"/>
-        <line num="9" count="140" type="stmt"/>
-        <line num="11" count="140" type="stmt"/>
+        <line num="8" count="260" type="stmt"/>
+        <line num="9" count="260" type="stmt"/>
+        <line num="11" count="260" type="stmt"/>
       </file>
     </package>
     <package name="src.components">
@@ -21,15 +21,15 @@
       <metrics statements="11" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="3"/>
       <file name="app.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\app\app.tsx">
         <metrics statements="11" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="3"/>
-        <line num="24" count="140" type="stmt"/>
-        <line num="25" count="378" type="stmt"/>
-        <line num="26" count="378" type="stmt"/>
-        <line num="27" count="378" type="stmt"/>
-        <line num="29" count="378" type="stmt"/>
-        <line num="30" count="280" type="stmt"/>
-        <line num="31" count="280" type="stmt"/>
-        <line num="34" count="378" type="stmt"/>
-        <line num="85" count="21" type="stmt"/>
+        <line num="24" count="260" type="stmt"/>
+        <line num="25" count="702" type="stmt"/>
+        <line num="26" count="702" type="stmt"/>
+        <line num="27" count="702" type="stmt"/>
+        <line num="29" count="702" type="stmt"/>
+        <line num="30" count="520" type="stmt"/>
+        <line num="31" count="520" type="stmt"/>
+        <line num="34" count="702" type="stmt"/>
+        <line num="85" count="39" type="stmt"/>
         <line num="99" count="0" type="stmt"/>
         <line num="113" count="0" type="stmt"/>
       </file>
@@ -38,44 +38,44 @@
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="app-header.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\app-header\app-header.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="6" count="140" type="stmt"/>
-        <line num="7" count="1218" type="stmt"/>
-        <line num="8" count="1218" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="260" type="stmt"/>
+        <line num="7" count="2262" type="stmt"/>
+        <line num="8" count="2262" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\app-header\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="src.components.burger-constructor">
-      <metrics statements="26" coveredstatements="20" conditionals="14" coveredconditionals="7" methods="6" coveredmethods="5"/>
+      <metrics statements="26" coveredstatements="22" conditionals="14" coveredconditionals="7" methods="6" coveredmethods="6"/>
       <file name="burger-constructor.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\burger-constructor\burger-constructor.tsx">
-        <metrics statements="26" coveredstatements="20" conditionals="14" coveredconditionals="7" methods="6" coveredmethods="5"/>
-        <line num="14" count="140" type="stmt"/>
-        <line num="15" count="1622" type="stmt"/>
-        <line num="17" count="1622" type="stmt"/>
-        <line num="18" count="1622" type="stmt"/>
-        <line num="20" count="1622" type="stmt"/>
-        <line num="22" count="1622" type="stmt"/>
-        <line num="23" count="1622" type="stmt"/>
-        <line num="24" count="112" type="stmt"/>
-        <line num="26" count="1622" type="cond" truecount="2" falsecount="0"/>
-        <line num="27" count="154" type="stmt"/>
-        <line num="28" count="154" type="stmt"/>
-        <line num="31" count="1622" type="stmt"/>
-        <line num="32" count="7" type="cond" truecount="3" falsecount="1"/>
-        <line num="33" count="7" type="stmt"/>
-        <line num="34" count="7" type="stmt"/>
+        <metrics statements="26" coveredstatements="22" conditionals="14" coveredconditionals="7" methods="6" coveredmethods="6"/>
+        <line num="14" count="260" type="stmt"/>
+        <line num="15" count="3040" type="stmt"/>
+        <line num="17" count="3040" type="stmt"/>
+        <line num="18" count="3040" type="stmt"/>
+        <line num="20" count="3040" type="stmt"/>
+        <line num="22" count="3040" type="stmt"/>
+        <line num="23" count="3040" type="stmt"/>
+        <line num="24" count="210" type="stmt"/>
+        <line num="26" count="3040" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="284" type="stmt"/>
+        <line num="28" count="284" type="stmt"/>
+        <line num="31" count="3040" type="stmt"/>
+        <line num="32" count="11" type="cond" truecount="3" falsecount="1"/>
+        <line num="33" count="11" type="stmt"/>
+        <line num="34" count="11" type="stmt"/>
         <line num="35" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="36" count="0" type="stmt"/>
         <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="38" count="0" type="stmt"/>
-        <line num="41" count="1622" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="46" count="1622" type="stmt"/>
-        <line num="48" count="742" type="cond" truecount="2" falsecount="0"/>
-        <line num="50" count="98" type="stmt"/>
-        <line num="56" count="1622" type="stmt"/>
+        <line num="41" count="3040" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="46" count="3040" type="stmt"/>
+        <line num="48" count="1376" type="cond" truecount="2" falsecount="0"/>
+        <line num="50" count="186" type="stmt"/>
+        <line num="56" count="3040" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\burger-constructor\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -85,15 +85,15 @@
       <metrics statements="9" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
       <file name="burger-constructor-element.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\burger-constructor-element\burger-constructor-element.tsx">
         <metrics statements="9" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
-        <line num="11" count="140" type="stmt"/>
-        <line num="13" count="70" type="stmt"/>
-        <line num="15" count="70" type="stmt"/>
+        <line num="11" count="260" type="stmt"/>
+        <line num="13" count="134" type="stmt"/>
+        <line num="15" count="134" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="19" count="70" type="stmt"/>
+        <line num="19" count="134" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="23" count="70" type="stmt"/>
+        <line num="23" count="134" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="27" count="70" type="stmt"/>
+        <line num="27" count="134" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\burger-constructor-element\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -103,12 +103,12 @@
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="burger-ingredient.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\burger-ingredient\burger-ingredient.tsx">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="8" count="140" type="stmt"/>
-        <line num="10" count="10094" type="stmt"/>
-        <line num="11" count="10094" type="stmt"/>
-        <line num="13" count="10094" type="stmt"/>
-        <line num="14" count="84" type="stmt"/>
-        <line num="17" count="10094" type="stmt"/>
+        <line num="8" count="260" type="stmt"/>
+        <line num="10" count="18740" type="stmt"/>
+        <line num="11" count="18740" type="stmt"/>
+        <line num="13" count="18740" type="stmt"/>
+        <line num="14" count="157" type="stmt"/>
+        <line num="17" count="18740" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\burger-ingredient\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -118,26 +118,26 @@
       <metrics statements="28" coveredstatements="20" conditionals="12" coveredconditionals="5" methods="6" coveredmethods="5"/>
       <file name="burger-ingredients.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\burger-ingredients\burger-ingredients.tsx">
         <metrics statements="28" coveredstatements="20" conditionals="12" coveredconditionals="5" methods="6" coveredmethods="5"/>
-        <line num="8" count="140" type="stmt"/>
-        <line num="9" count="1818" type="stmt"/>
-        <line num="11" count="23070" type="stmt"/>
-        <line num="12" count="23070" type="stmt"/>
-        <line num="13" count="23070" type="stmt"/>
-        <line num="15" count="1818" type="stmt"/>
-        <line num="16" count="1818" type="stmt"/>
-        <line num="17" count="1818" type="stmt"/>
-        <line num="18" count="1818" type="stmt"/>
-        <line num="20" count="1818" type="stmt"/>
-        <line num="24" count="1818" type="stmt"/>
-        <line num="28" count="1818" type="stmt"/>
-        <line num="32" count="1818" type="stmt"/>
-        <line num="33" count="675" type="cond" truecount="2" falsecount="0"/>
-        <line num="34" count="61" type="stmt"/>
-        <line num="35" count="614" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="260" type="stmt"/>
+        <line num="9" count="3314" type="stmt"/>
+        <line num="11" count="41910" type="stmt"/>
+        <line num="12" count="41910" type="stmt"/>
+        <line num="13" count="41910" type="stmt"/>
+        <line num="15" count="3314" type="stmt"/>
+        <line num="16" count="3314" type="stmt"/>
+        <line num="17" count="3314" type="stmt"/>
+        <line num="18" count="3314" type="stmt"/>
+        <line num="20" count="3314" type="stmt"/>
+        <line num="24" count="3314" type="stmt"/>
+        <line num="28" count="3314" type="stmt"/>
+        <line num="32" count="3314" type="stmt"/>
+        <line num="33" count="1238" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="101" type="stmt"/>
+        <line num="35" count="1137" type="cond" truecount="1" falsecount="1"/>
         <line num="36" count="0" type="stmt"/>
-        <line num="37" count="614" type="cond" truecount="2" falsecount="0"/>
-        <line num="38" count="54" type="stmt"/>
-        <line num="42" count="1818" type="stmt"/>
+        <line num="37" count="1137" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="97" type="stmt"/>
+        <line num="42" count="3314" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
         <line num="44" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="45" count="0" type="stmt"/>
@@ -145,7 +145,7 @@
         <line num="47" count="0" type="stmt"/>
         <line num="48" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="49" count="0" type="stmt"/>
-        <line num="52" count="1818" type="stmt"/>
+        <line num="52" count="3314" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\burger-ingredients\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -155,7 +155,7 @@
       <metrics statements="7" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="centering-component.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\centering-component\centering-component.tsx">
         <metrics statements="7" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="6" count="140" type="stmt"/>
+        <line num="6" count="260" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -168,11 +168,11 @@
       <metrics statements="10" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="feed-info.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\feed-info\feed-info.tsx">
         <metrics statements="10" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="7" count="140" type="stmt"/>
+        <line num="7" count="260" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="13" count="140" type="stmt"/>
+        <line num="13" count="260" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
@@ -190,35 +190,35 @@
       </file>
       <file name="ingredient-details.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ingredient-details\ingredient-details.tsx">
         <metrics statements="9" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
-        <line num="8" count="140" type="stmt"/>
-        <line num="9" count="56" type="stmt"/>
-        <line num="10" count="56" type="stmt"/>
-        <line num="12" count="56" type="stmt"/>
-        <line num="13" count="112" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="56" type="stmt"/>
-        <line num="18" count="56" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="260" type="stmt"/>
+        <line num="9" count="104" type="stmt"/>
+        <line num="10" count="104" type="stmt"/>
+        <line num="12" count="104" type="stmt"/>
+        <line num="13" count="208" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="104" type="stmt"/>
+        <line num="18" count="104" type="cond" truecount="1" falsecount="1"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="22" count="56" type="stmt"/>
+        <line num="22" count="104" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ingredients-category">
-      <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ingredients-category\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="ingredients-category.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ingredients-category\ingredients-category.tsx">
-        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
-        <line num="8" count="140" type="stmt"/>
-        <line num="12" count="5760" type="stmt"/>
-        <line num="14" count="5760" type="stmt"/>
-        <line num="15" count="2226" type="stmt"/>
-        <line num="16" count="2226" type="stmt"/>
-        <line num="17" count="2226" type="stmt"/>
-        <line num="18" count="294" type="cond" truecount="1" falsecount="1"/>
-        <line num="19" count="294" type="stmt"/>
-        <line num="21" count="2226" type="cond" truecount="2" falsecount="0"/>
-        <line num="22" count="2226" type="stmt"/>
-        <line num="25" count="5760" type="stmt"/>
+        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="8" count="260" type="stmt"/>
+        <line num="12" count="10560" type="stmt"/>
+        <line num="14" count="10560" type="stmt"/>
+        <line num="15" count="4128" type="stmt"/>
+        <line num="16" count="4128" type="stmt"/>
+        <line num="17" count="4128" type="stmt"/>
+        <line num="18" count="558" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="558" type="stmt"/>
+        <line num="21" count="4128" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="4128" type="stmt"/>
+        <line num="25" count="10560" type="stmt"/>
       </file>
     </package>
     <package name="src.components.modal">
@@ -228,15 +228,15 @@
       </file>
       <file name="modal.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\modal\modal.tsx">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
-        <line num="7" count="140" type="stmt"/>
-        <line num="9" count="140" type="stmt"/>
-        <line num="10" count="84" type="stmt"/>
-        <line num="11" count="84" type="stmt"/>
-        <line num="12" count="7" type="cond" truecount="2" falsecount="0"/>
-        <line num="15" count="84" type="stmt"/>
-        <line num="16" count="84" type="stmt"/>
-        <line num="17" count="70" type="stmt"/>
-        <line num="21" count="84" type="stmt"/>
+        <line num="7" count="260" type="stmt"/>
+        <line num="9" count="260" type="stmt"/>
+        <line num="10" count="148" type="stmt"/>
+        <line num="11" count="148" type="stmt"/>
+        <line num="12" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="148" type="stmt"/>
+        <line num="16" count="148" type="stmt"/>
+        <line num="17" count="127" type="stmt"/>
+        <line num="21" count="148" type="stmt"/>
       </file>
     </package>
     <package name="src.components.order-card">
@@ -246,8 +246,8 @@
       </file>
       <file name="order-card.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\order-card\order-card.tsx">
         <metrics statements="17" coveredstatements="2" conditionals="8" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="9" count="140" type="stmt"/>
-        <line num="11" count="140" type="stmt"/>
+        <line num="9" count="260" type="stmt"/>
+        <line num="11" count="260" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
@@ -272,7 +272,7 @@
       </file>
       <file name="order-info.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\order-info\order-info.tsx">
         <metrics statements="23" coveredstatements="1" conditionals="12" coveredconditionals="0" methods="6" coveredmethods="0"/>
-        <line num="13" count="140" type="stmt"/>
+        <line num="13" count="260" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
@@ -304,8 +304,8 @@
       </file>
       <file name="order-status.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\order-status\order-status.tsx">
         <metrics statements="10" coveredstatements="2" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="140" type="stmt"/>
-        <line num="11" count="140" type="stmt"/>
+        <line num="5" count="260" type="stmt"/>
+        <line num="11" count="260" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="cond" truecount="0" falsecount="3"/>
         <line num="15" count="0" type="stmt"/>
@@ -323,7 +323,7 @@
       </file>
       <file name="orders-list.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\orders-list\orders-list.tsx">
         <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="6" count="140" type="stmt"/>
+        <line num="6" count="260" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -336,7 +336,7 @@
       </file>
       <file name="profile-menu.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\profile-menu\profile-menu.tsx">
         <metrics statements="8" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="7" count="140" type="stmt"/>
+        <line num="7" count="260" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -350,7 +350,7 @@
       <metrics statements="13" coveredstatements="1" conditionals="12" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="protected-route.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\protected-route\protected-route.tsx">
         <metrics statements="13" coveredstatements="1" conditionals="12" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="10" count="140" type="stmt"/>
+        <line num="10" count="260" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
@@ -375,31 +375,31 @@
       <metrics statements="13" coveredstatements="13" conditionals="22" coveredconditionals="15" methods="6" coveredmethods="6"/>
       <file name="app-header.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\app-header\app-header.tsx">
         <metrics statements="13" coveredstatements="13" conditionals="22" coveredconditionals="15" methods="6" coveredmethods="6"/>
-        <line num="12" count="140" type="stmt"/>
-        <line num="13" count="1218" type="stmt"/>
-        <line num="14" count="1218" type="stmt"/>
-        <line num="15" count="1218" type="cond" truecount="2" falsecount="0"/>
-        <line num="16" count="56" type="stmt"/>
-        <line num="17" count="1162" type="cond" truecount="1" falsecount="1"/>
-        <line num="18" count="1162" type="stmt"/>
-        <line num="21" count="1218" type="stmt"/>
-        <line num="28" count="1218" type="stmt"/>
-        <line num="42" count="1218" type="stmt"/>
-        <line num="56" count="1218" type="stmt"/>
-        <line num="70" count="658" type="stmt"/>
-        <line num="85" count="560" type="stmt"/>
+        <line num="12" count="260" type="stmt"/>
+        <line num="13" count="2262" type="stmt"/>
+        <line num="14" count="2262" type="stmt"/>
+        <line num="15" count="2262" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="104" type="stmt"/>
+        <line num="17" count="2158" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="2158" type="stmt"/>
+        <line num="21" count="2262" type="stmt"/>
+        <line num="28" count="2262" type="stmt"/>
+        <line num="42" count="2262" type="stmt"/>
+        <line num="56" count="2262" type="stmt"/>
+        <line num="70" count="1222" type="stmt"/>
+        <line num="85" count="1040" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\app-header\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="src.components.ui.burger-constructor">
-      <metrics statements="3" coveredstatements="3" conditionals="12" coveredconditionals="11" methods="2" coveredmethods="2"/>
+      <metrics statements="3" coveredstatements="3" conditionals="20" coveredconditionals="20" methods="3" coveredmethods="3"/>
       <file name="burger-constructor.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\burger-constructor\burger-constructor.tsx">
-        <metrics statements="3" coveredstatements="3" conditionals="12" coveredconditionals="11" methods="2" coveredmethods="2"/>
-        <line num="13" count="140" type="stmt"/>
-        <line num="21" count="1622" type="stmt"/>
-        <line num="43" count="112" type="stmt"/>
+        <metrics statements="3" coveredstatements="3" conditionals="20" coveredconditionals="20" methods="3" coveredmethods="3"/>
+        <line num="13" count="260" type="stmt"/>
+        <line num="21" count="3040" type="stmt"/>
+        <line num="43" count="210" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\burger-constructor\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -409,8 +409,8 @@
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="burger-constructor-element.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\burger-constructor-element\burger-constructor-element.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="8" count="140" type="stmt"/>
-        <line num="17" count="70" type="stmt"/>
+        <line num="8" count="260" type="stmt"/>
+        <line num="17" count="134" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\burger-constructor-element\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -420,9 +420,9 @@
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="burger-ingredient.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\burger-ingredient\burger-ingredient.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="14" count="140" type="stmt"/>
-        <line num="16" count="10094" type="stmt"/>
-        <line num="18" count="10094" type="stmt"/>
+        <line num="14" count="260" type="stmt"/>
+        <line num="16" count="18740" type="stmt"/>
+        <line num="18" count="18740" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\burger-ingredient\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -432,8 +432,8 @@
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="burger-ingredients.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\burger-ingredients\burger-ingredients.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="8" count="140" type="stmt"/>
-        <line num="22" count="1724" type="stmt"/>
+        <line num="8" count="260" type="stmt"/>
+        <line num="22" count="3156" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\burger-ingredients\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -443,7 +443,7 @@
       <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="centering-component.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\centering-component\centering-component.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="140" type="stmt"/>
+        <line num="5" count="260" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\centering-component\index.ts">
@@ -454,13 +454,13 @@
       <metrics statements="8" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="feed-info.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\feed-info\feed-info.tsx">
         <metrics statements="8" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="7" count="140" type="stmt"/>
+        <line num="7" count="260" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="28" count="140" type="stmt"/>
+        <line num="28" count="260" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
-        <line num="45" count="140" type="stmt"/>
+        <line num="45" count="260" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\feed-info\index.ts">
@@ -474,9 +474,9 @@
       </file>
       <file name="ingredient-details.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\ingredient-details\ingredient-details.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="140" type="stmt"/>
-        <line num="8" count="56" type="stmt"/>
-        <line num="10" count="56" type="stmt"/>
+        <line num="5" count="260" type="stmt"/>
+        <line num="8" count="104" type="stmt"/>
+        <line num="10" count="104" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ui.ingredients-category">
@@ -486,9 +486,9 @@
       </file>
       <file name="ingredients-category.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\ingredients-category\ingredients-category.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="6" count="140" type="stmt"/>
-        <line num="10" count="5760" type="stmt"/>
-        <line num="16" count="24600" type="stmt"/>
+        <line num="6" count="260" type="stmt"/>
+        <line num="10" count="10560" type="stmt"/>
+        <line num="16" count="45000" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ui.modal">
@@ -498,8 +498,8 @@
       </file>
       <file name="modal.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\modal\modal.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="9" count="140" type="stmt"/>
-        <line num="11" count="84" type="stmt"/>
+        <line num="9" count="260" type="stmt"/>
+        <line num="11" count="148" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ui.modal-overlay">
@@ -509,8 +509,8 @@
       </file>
       <file name="modal-overlay.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\modal-overlay\modal-overlay.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="140" type="stmt"/>
-        <line num="4" count="84" type="stmt"/>
+        <line num="3" count="260" type="stmt"/>
+        <line num="4" count="148" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ui.order-card">
@@ -520,7 +520,7 @@
       </file>
       <file name="order-card.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\order-card\order-card.tsx">
         <metrics statements="5" coveredstatements="1" conditionals="10" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="13" count="140" type="stmt"/>
+        <line num="13" count="260" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
@@ -534,8 +534,8 @@
       </file>
       <file name="order-details.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\order-details\order-details.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="6" count="140" type="stmt"/>
-        <line num="9" count="14" type="stmt"/>
+        <line num="6" count="260" type="stmt"/>
+        <line num="9" count="22" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ui.order-info">
@@ -545,7 +545,7 @@
       </file>
       <file name="order-info.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\order-info\order-info.tsx">
         <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="12" count="140" type="stmt"/>
+        <line num="12" count="260" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
       </file>
@@ -557,7 +557,7 @@
       </file>
       <file name="order-status.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\order-status\order-status.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="140" type="stmt"/>
+        <line num="4" count="260" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
       </file>
     </package>
@@ -568,7 +568,7 @@
       </file>
       <file name="orders-list.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\orders-list\orders-list.tsx">
         <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="8" count="140" type="stmt"/>
+        <line num="8" count="260" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
       </file>
@@ -583,7 +583,7 @@
       <metrics statements="2" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="constructor-page.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\pages\constructor-page\constructor-page.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="9" count="140" type="stmt"/>
+        <line num="9" count="260" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\pages\constructor-page\index.ts">
@@ -594,7 +594,7 @@
       <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="feed.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\pages\feed\feed.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="9" count="140" type="stmt"/>
+        <line num="9" count="260" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\pages\feed\index.ts">
@@ -605,7 +605,7 @@
       <metrics statements="3" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="forgot-password.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\pages\forgot-password\forgot-password.tsx">
         <metrics statements="3" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="8" count="140" type="stmt"/>
+        <line num="8" count="260" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
       </file>
@@ -620,7 +620,7 @@
       </file>
       <file name="login.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\pages\login\login.tsx">
         <metrics statements="4" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="11" count="140" type="stmt"/>
+        <line num="11" count="260" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
@@ -633,7 +633,7 @@
       </file>
       <file name="profile.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\pages\profile\profile.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="10" count="140" type="stmt"/>
+        <line num="10" count="260" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
       </file>
     </package>
@@ -644,7 +644,7 @@
       </file>
       <file name="profile-orders.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\pages\profile-orders\profile-orders.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="8" count="140" type="stmt"/>
+        <line num="8" count="260" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
       </file>
     </package>
@@ -655,7 +655,7 @@
       </file>
       <file name="register.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\pages\register\register.tsx">
         <metrics statements="5" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="11" count="140" type="stmt"/>
+        <line num="11" count="260" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
@@ -669,7 +669,7 @@
       </file>
       <file name="reset-password.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\pages\reset-password\reset-password.tsx">
         <metrics statements="4" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="11" count="140" type="stmt"/>
+        <line num="11" count="260" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
@@ -682,8 +682,8 @@
       </file>
       <file name="preloader.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\preloader\preloader.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="140" type="stmt"/>
-        <line num="5" count="294" type="stmt"/>
+        <line num="4" count="260" type="stmt"/>
+        <line num="5" count="542" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ui.profile-menu">
@@ -693,7 +693,7 @@
       </file>
       <file name="profile-menu.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\components\ui\profile-menu\profile-menu.tsx">
         <metrics statements="4" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="6" count="140" type="stmt"/>
+        <line num="6" count="260" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
@@ -709,9 +709,9 @@
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="constructor-page.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\pages\constructor-page\constructor-page.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="10" count="140" type="stmt"/>
-        <line num="11" count="1218" type="stmt"/>
-        <line num="13" count="1218" type="stmt"/>
+        <line num="10" count="260" type="stmt"/>
+        <line num="11" count="2262" type="stmt"/>
+        <line num="13" count="2262" type="stmt"/>
       </file>
       <file name="index.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\pages\constructor-page\index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -721,7 +721,7 @@
       <metrics statements="8" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="feed.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\pages\feed\feed.tsx">
         <metrics statements="8" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="10" count="140" type="stmt"/>
+        <line num="10" count="260" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
@@ -738,7 +738,7 @@
       <metrics statements="12" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="forgot-password.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\pages\forgot-password\forgot-password.tsx">
         <metrics statements="12" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="7" count="140" type="stmt"/>
+        <line num="7" count="260" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -762,7 +762,7 @@
       </file>
       <file name="login.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\pages\login\login.tsx">
         <metrics statements="14" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="11" count="140" type="stmt"/>
+        <line num="11" count="260" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
@@ -785,7 +785,7 @@
       </file>
       <file name="not-fount-404.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\pages\not-fount-404\not-fount-404.tsx">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="140" type="stmt"/>
+        <line num="3" count="260" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
     </package>
@@ -796,7 +796,7 @@
       </file>
       <file name="profile.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\pages\profile\profile.tsx">
         <metrics statements="21" coveredstatements="1" conditionals="13" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="11" count="140" type="stmt"/>
+        <line num="11" count="260" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
@@ -826,7 +826,7 @@
       </file>
       <file name="profile-orders.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\pages\profile-orders\profile-orders.tsx">
         <metrics statements="9" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="12" count="140" type="stmt"/>
+        <line num="12" count="260" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
@@ -844,7 +844,7 @@
       </file>
       <file name="register.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\pages\register\register.tsx">
         <metrics statements="12" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="10" count="140" type="stmt"/>
+        <line num="10" count="260" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
@@ -865,7 +865,7 @@
       </file>
       <file name="reset-password.tsx" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\pages\reset-password\reset-password.tsx">
         <metrics statements="16" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="7" count="140" type="stmt"/>
+        <line num="7" count="260" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -887,72 +887,72 @@
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="store.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\services\store.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="13" count="140" type="stmt"/>
-        <line num="21" count="140" type="stmt"/>
-        <line num="30" count="2000" type="stmt"/>
-        <line num="31" count="140" type="stmt"/>
+        <line num="13" count="260" type="stmt"/>
+        <line num="21" count="260" type="stmt"/>
+        <line num="30" count="3742" type="stmt"/>
+        <line num="31" count="260" type="stmt"/>
       </file>
     </package>
     <package name="src.services.slices.constructorSlice">
-      <metrics statements="39" coveredstatements="28" conditionals="15" coveredconditionals="11" methods="15" coveredmethods="9"/>
+      <metrics statements="39" coveredstatements="29" conditionals="15" coveredconditionals="11" methods="15" coveredmethods="10"/>
       <file name="constructorSlice.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\services\slices\constructorSlice\constructorSlice.ts">
-        <metrics statements="39" coveredstatements="28" conditionals="15" coveredconditionals="11" methods="15" coveredmethods="9"/>
-        <line num="22" count="140" type="stmt"/>
-        <line num="34" count="140" type="stmt"/>
-        <line num="37" count="7" type="stmt"/>
-        <line num="39" count="7" type="cond" truecount="1" falsecount="1"/>
-        <line num="42" count="21" type="cond" truecount="2" falsecount="0"/>
+        <metrics statements="39" coveredstatements="29" conditionals="15" coveredconditionals="11" methods="15" coveredmethods="10"/>
+        <line num="22" count="260" type="stmt"/>
+        <line num="34" count="260" type="stmt"/>
+        <line num="37" count="11" type="stmt"/>
+        <line num="39" count="11" type="cond" truecount="1" falsecount="1"/>
+        <line num="42" count="34" type="cond" truecount="2" falsecount="0"/>
         <line num="44" count="0" type="stmt"/>
-        <line num="49" count="7" type="stmt"/>
-        <line num="52" count="7" type="cond" truecount="3" falsecount="1"/>
+        <line num="49" count="11" type="stmt"/>
+        <line num="52" count="11" type="cond" truecount="3" falsecount="1"/>
         <line num="53" count="0" type="stmt"/>
-        <line num="58" count="7" type="stmt"/>
+        <line num="58" count="11" type="stmt"/>
         <line num="60" count="0" type="stmt"/>
-        <line num="67" count="140" type="stmt"/>
-        <line num="71" count="15192" type="stmt"/>
-        <line num="77" count="84" type="cond" truecount="2" falsecount="0"/>
-        <line num="78" count="49" type="stmt"/>
-        <line num="80" count="35" type="stmt"/>
-        <line num="84" count="84" type="stmt"/>
-        <line num="85" count="84" type="stmt"/>
+        <line num="67" count="260" type="stmt"/>
+        <line num="71" count="28164" type="stmt"/>
+        <line num="77" count="157" type="cond" truecount="2" falsecount="0"/>
+        <line num="78" count="91" type="stmt"/>
+        <line num="80" count="66" type="stmt"/>
+        <line num="84" count="157" type="stmt"/>
+        <line num="85" count="157" type="stmt"/>
         <line num="91" count="0" type="stmt"/>
         <line num="93" count="0" type="stmt"/>
         <line num="99" count="0" type="stmt"/>
         <line num="108" count="0" type="stmt"/>
-        <line num="116" count="7" type="stmt"/>
-        <line num="120" count="0" type="stmt"/>
-        <line num="126" count="140" type="stmt"/>
-        <line num="128" count="7" type="stmt"/>
-        <line num="129" count="7" type="stmt"/>
-        <line num="130" count="7" type="stmt"/>
+        <line num="116" count="14" type="stmt"/>
+        <line num="120" count="3" type="stmt"/>
+        <line num="126" count="260" type="stmt"/>
+        <line num="128" count="11" type="stmt"/>
+        <line num="129" count="11" type="stmt"/>
+        <line num="130" count="11" type="stmt"/>
         <line num="133" count="0" type="stmt"/>
         <line num="134" count="0" type="stmt"/>
         <line num="135" count="0" type="stmt"/>
-        <line num="138" count="7" type="stmt"/>
-        <line num="139" count="7" type="stmt"/>
-        <line num="140" count="7" type="stmt"/>
-        <line num="141" count="7" type="stmt"/>
-        <line num="142" count="7" type="stmt"/>
-        <line num="146" count="7" type="stmt"/>
-        <line num="159" count="140" type="stmt"/>
-        <line num="162" count="140" type="stmt"/>
+        <line num="138" count="11" type="stmt"/>
+        <line num="139" count="11" type="stmt"/>
+        <line num="140" count="11" type="stmt"/>
+        <line num="141" count="11" type="stmt"/>
+        <line num="142" count="11" type="stmt"/>
+        <line num="146" count="11" type="stmt"/>
+        <line num="159" count="260" type="stmt"/>
+        <line num="162" count="260" type="stmt"/>
       </file>
     </package>
     <package name="src.services.slices.feedSlice">
       <metrics statements="21" coveredstatements="5" conditionals="8" coveredconditionals="0" methods="6" coveredmethods="1"/>
       <file name="feedSlice.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\services\slices\feedSlice\feedSlice.ts">
         <metrics statements="21" coveredstatements="5" conditionals="8" coveredconditionals="0" methods="6" coveredmethods="1"/>
-        <line num="13" count="140" type="stmt"/>
-        <line num="27" count="140" type="stmt"/>
+        <line num="13" count="260" type="stmt"/>
+        <line num="27" count="260" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="39" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
-        <line num="50" count="140" type="stmt"/>
+        <line num="50" count="260" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
-        <line num="58" count="140" type="stmt"/>
+        <line num="58" count="260" type="stmt"/>
         <line num="60" count="0" type="stmt"/>
         <line num="61" count="0" type="stmt"/>
         <line num="64" count="0" type="stmt"/>
@@ -962,40 +962,40 @@
         <line num="70" count="0" type="stmt"/>
         <line num="71" count="0" type="stmt"/>
         <line num="72" count="0" type="stmt"/>
-        <line num="77" count="140" type="stmt"/>
+        <line num="77" count="260" type="stmt"/>
       </file>
     </package>
     <package name="src.services.slices.ingredientSlice">
       <metrics statements="19" coveredstatements="15" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>
       <file name="ingredientSlice.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\services\slices\ingredientSlice\ingredientSlice.ts">
         <metrics statements="19" coveredstatements="15" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>
-        <line num="11" count="140" type="stmt"/>
-        <line num="18" count="140" type="stmt"/>
-        <line num="23" count="280" type="stmt"/>
-        <line num="24" count="280" type="stmt"/>
-        <line num="26" count="280" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="260" type="stmt"/>
+        <line num="18" count="260" type="stmt"/>
+        <line num="23" count="520" type="stmt"/>
+        <line num="24" count="520" type="stmt"/>
+        <line num="26" count="520" type="cond" truecount="1" falsecount="1"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="30" count="280" type="stmt"/>
+        <line num="30" count="520" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="37" count="140" type="stmt"/>
-        <line num="43" count="4566" type="stmt"/>
-        <line num="46" count="140" type="stmt"/>
-        <line num="49" count="280" type="stmt"/>
-        <line num="50" count="280" type="stmt"/>
+        <line num="37" count="260" type="stmt"/>
+        <line num="43" count="8459" type="stmt"/>
+        <line num="46" count="260" type="stmt"/>
+        <line num="49" count="520" type="stmt"/>
+        <line num="50" count="520" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
-        <line num="59" count="280" type="stmt"/>
-        <line num="60" count="280" type="stmt"/>
-        <line num="61" count="280" type="stmt"/>
-        <line num="67" count="140" type="stmt"/>
+        <line num="59" count="520" type="stmt"/>
+        <line num="60" count="520" type="stmt"/>
+        <line num="61" count="520" type="stmt"/>
+        <line num="67" count="260" type="stmt"/>
       </file>
     </package>
     <package name="src.services.slices.orderSlice">
       <metrics statements="21" coveredstatements="5" conditionals="11" coveredconditionals="0" methods="6" coveredmethods="1"/>
       <file name="orderSlice.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\services\slices\orderSlice\orderSlice.ts">
         <metrics statements="21" coveredstatements="5" conditionals="11" coveredconditionals="0" methods="6" coveredmethods="1"/>
-        <line num="15" count="140" type="stmt"/>
-        <line num="24" count="140" type="stmt"/>
+        <line num="15" count="260" type="stmt"/>
+        <line num="24" count="260" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
         <line num="29" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="30" count="0" type="stmt"/>
@@ -1004,9 +1004,9 @@
         <line num="41" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
         <line num="46" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="52" count="140" type="stmt"/>
+        <line num="52" count="260" type="stmt"/>
         <line num="59" count="0" type="stmt"/>
-        <line num="64" count="140" type="stmt"/>
+        <line num="64" count="260" type="stmt"/>
         <line num="66" count="0" type="stmt"/>
         <line num="67" count="0" type="stmt"/>
         <line num="70" count="0" type="stmt"/>
@@ -1014,22 +1014,22 @@
         <line num="74" count="0" type="stmt"/>
         <line num="75" count="0" type="stmt"/>
         <line num="76" count="0" type="stmt"/>
-        <line num="82" count="140" type="stmt"/>
+        <line num="82" count="260" type="stmt"/>
       </file>
     </package>
     <package name="src.services.slices.userSlice">
       <metrics statements="116" coveredstatements="23" conditionals="28" coveredconditionals="1" methods="29" coveredmethods="5"/>
       <file name="userSlice.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\services\slices\userSlice\userSlice.ts">
         <metrics statements="116" coveredstatements="23" conditionals="28" coveredconditionals="1" methods="29" coveredmethods="5"/>
-        <line num="29" count="140" type="stmt"/>
-        <line num="42" count="140" type="stmt"/>
+        <line num="29" count="260" type="stmt"/>
+        <line num="42" count="260" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="47" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="48" count="0" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
-        <line num="60" count="140" type="stmt"/>
+        <line num="60" count="260" type="stmt"/>
         <line num="63" count="0" type="stmt"/>
         <line num="64" count="0" type="stmt"/>
         <line num="66" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -1039,40 +1039,40 @@
         <line num="75" count="0" type="stmt"/>
         <line num="77" count="0" type="stmt"/>
         <line num="79" count="0" type="stmt"/>
-        <line num="88" count="140" type="stmt"/>
-        <line num="89" count="280" type="stmt"/>
-        <line num="90" count="280" type="stmt"/>
-        <line num="91" count="280" type="cond" truecount="1" falsecount="1"/>
+        <line num="88" count="260" type="stmt"/>
+        <line num="89" count="520" type="stmt"/>
+        <line num="90" count="520" type="stmt"/>
+        <line num="91" count="520" type="cond" truecount="1" falsecount="1"/>
         <line num="92" count="0" type="stmt"/>
-        <line num="96" count="280" type="stmt"/>
+        <line num="96" count="520" type="stmt"/>
         <line num="98" count="0" type="stmt"/>
-        <line num="104" count="140" type="stmt"/>
+        <line num="104" count="260" type="stmt"/>
         <line num="107" count="0" type="stmt"/>
         <line num="108" count="0" type="stmt"/>
         <line num="109" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="110" count="0" type="stmt"/>
         <line num="114" count="0" type="stmt"/>
         <line num="116" count="0" type="stmt"/>
-        <line num="122" count="140" type="stmt"/>
+        <line num="122" count="260" type="stmt"/>
         <line num="125" count="0" type="stmt"/>
         <line num="126" count="0" type="stmt"/>
         <line num="127" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="128" count="0" type="stmt"/>
         <line num="132" count="0" type="stmt"/>
         <line num="134" count="0" type="stmt"/>
-        <line num="142" count="140" type="stmt"/>
+        <line num="142" count="260" type="stmt"/>
         <line num="145" count="0" type="stmt"/>
         <line num="146" count="0" type="stmt"/>
         <line num="147" count="0" type="stmt"/>
         <line num="148" count="0" type="stmt"/>
         <line num="149" count="0" type="stmt"/>
         <line num="151" count="0" type="stmt"/>
-        <line num="159" count="140" type="stmt"/>
+        <line num="159" count="260" type="stmt"/>
         <line num="164" count="0" type="stmt"/>
         <line num="167" count="0" type="stmt"/>
-        <line num="171" count="6078" type="stmt"/>
+        <line num="171" count="11267" type="stmt"/>
         <line num="172" count="0" type="stmt"/>
-        <line num="175" count="140" type="stmt"/>
+        <line num="175" count="260" type="stmt"/>
         <line num="178" count="0" type="stmt"/>
         <line num="179" count="0" type="stmt"/>
         <line num="180" count="0" type="stmt"/>
@@ -1098,16 +1098,16 @@
         <line num="212" count="0" type="stmt"/>
         <line num="213" count="0" type="stmt"/>
         <line num="214" count="0" type="stmt"/>
-        <line num="219" count="280" type="stmt"/>
-        <line num="220" count="280" type="stmt"/>
-        <line num="221" count="280" type="stmt"/>
+        <line num="219" count="520" type="stmt"/>
+        <line num="220" count="520" type="stmt"/>
+        <line num="221" count="520" type="stmt"/>
         <line num="224" count="0" type="stmt"/>
         <line num="225" count="0" type="stmt"/>
         <line num="226" count="0" type="stmt"/>
-        <line num="229" count="280" type="stmt"/>
-        <line num="230" count="280" type="stmt"/>
-        <line num="231" count="280" type="stmt"/>
-        <line num="232" count="280" type="stmt"/>
+        <line num="229" count="520" type="stmt"/>
+        <line num="230" count="520" type="stmt"/>
+        <line num="231" count="520" type="stmt"/>
+        <line num="232" count="520" type="stmt"/>
         <line num="237" count="0" type="stmt"/>
         <line num="238" count="0" type="stmt"/>
         <line num="241" count="0" type="stmt"/>
@@ -1135,18 +1135,18 @@
         <line num="281" count="0" type="stmt"/>
         <line num="282" count="0" type="stmt"/>
         <line num="283" count="0" type="stmt"/>
-        <line num="289" count="140" type="stmt"/>
-        <line num="290" count="140" type="stmt"/>
+        <line num="289" count="260" type="stmt"/>
+        <line num="290" count="260" type="stmt"/>
       </file>
     </package>
     <package name="src.utils">
       <metrics statements="89" coveredstatements="28" conditionals="37" coveredconditionals="5" methods="37" coveredmethods="9"/>
       <file name="burger-api.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\utils\burger-api.ts">
         <metrics statements="70" coveredstatements="26" conditionals="24" coveredconditionals="3" methods="34" coveredmethods="8"/>
-        <line num="6" count="140" type="stmt"/>
-        <line num="9" count="140" type="stmt"/>
-        <line num="10" count="567" type="cond" truecount="1" falsecount="1"/>
-        <line num="26" count="140" type="stmt"/>
+        <line num="6" count="260" type="stmt"/>
+        <line num="9" count="260" type="stmt"/>
+        <line num="10" count="1051" type="cond" truecount="1" falsecount="1"/>
+        <line num="26" count="260" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
         <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -1154,10 +1154,10 @@
         <line num="42" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
-        <line num="50" count="140" type="stmt"/>
-        <line num="54" count="287" type="stmt"/>
-        <line num="55" count="287" type="stmt"/>
-        <line num="56" count="287" type="stmt"/>
+        <line num="50" count="260" type="stmt"/>
+        <line num="54" count="531" type="stmt"/>
+        <line num="55" count="531" type="stmt"/>
+        <line num="56" count="531" type="stmt"/>
         <line num="59" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="60" count="0" type="stmt"/>
         <line num="62" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -1165,59 +1165,59 @@
         <line num="66" count="0" type="stmt"/>
         <line num="67" count="0" type="stmt"/>
         <line num="69" count="0" type="stmt"/>
-        <line num="94" count="140" type="stmt"/>
-        <line num="95" count="280" type="stmt"/>
-        <line num="96" count="280" type="stmt"/>
-        <line num="98" count="280" type="cond" truecount="1" falsecount="1"/>
+        <line num="94" count="260" type="stmt"/>
+        <line num="95" count="520" type="stmt"/>
+        <line num="96" count="520" type="stmt"/>
+        <line num="98" count="520" type="cond" truecount="1" falsecount="1"/>
         <line num="99" count="0" type="stmt"/>
-        <line num="105" count="140" type="stmt"/>
+        <line num="105" count="260" type="stmt"/>
         <line num="106" count="0" type="stmt"/>
         <line num="107" count="0" type="stmt"/>
         <line num="109" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="110" count="0" type="stmt"/>
-        <line num="116" count="140" type="stmt"/>
+        <line num="116" count="260" type="stmt"/>
         <line num="117" count="0" type="stmt"/>
         <line num="124" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="125" count="0" type="stmt"/>
-        <line num="137" count="140" type="stmt"/>
-        <line num="138" count="7" type="stmt"/>
-        <line num="148" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="137" count="260" type="stmt"/>
+        <line num="138" count="11" type="stmt"/>
+        <line num="148" count="11" type="cond" truecount="1" falsecount="1"/>
         <line num="149" count="0" type="stmt"/>
-        <line num="160" count="140" type="stmt"/>
+        <line num="160" count="260" type="stmt"/>
         <line num="161" count="0" type="stmt"/>
         <line num="166" count="0" type="stmt"/>
-        <line num="184" count="140" type="stmt"/>
+        <line num="184" count="260" type="stmt"/>
         <line num="185" count="0" type="stmt"/>
         <line num="192" count="0" type="stmt"/>
         <line num="194" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="195" count="0" type="stmt"/>
-        <line num="206" count="140" type="stmt"/>
+        <line num="206" count="260" type="stmt"/>
         <line num="207" count="0" type="stmt"/>
         <line num="214" count="0" type="stmt"/>
         <line num="216" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="217" count="0" type="stmt"/>
-        <line num="223" count="140" type="stmt"/>
+        <line num="223" count="260" type="stmt"/>
         <line num="224" count="0" type="stmt"/>
         <line num="231" count="0" type="stmt"/>
         <line num="233" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="234" count="0" type="stmt"/>
-        <line num="240" count="140" type="stmt"/>
+        <line num="240" count="260" type="stmt"/>
         <line num="241" count="0" type="stmt"/>
         <line num="248" count="0" type="stmt"/>
         <line num="250" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="251" count="0" type="stmt"/>
-        <line num="260" count="140" type="stmt"/>
-        <line num="261" count="280" type="stmt"/>
-        <line num="270" count="140" type="stmt"/>
+        <line num="260" count="260" type="stmt"/>
+        <line num="261" count="520" type="stmt"/>
+        <line num="270" count="260" type="stmt"/>
         <line num="271" count="0" type="stmt"/>
-        <line num="283" count="140" type="stmt"/>
+        <line num="283" count="260" type="stmt"/>
         <line num="284" count="0" type="stmt"/>
         <line num="292" count="0" type="stmt"/>
       </file>
       <file name="cookie.ts" path="D:\projects\forYndex\BurgerLast\stellar-burger-review\src\utils\cookie.ts">
         <metrics statements="19" coveredstatements="2" conditionals="13" coveredconditionals="2" methods="3" coveredmethods="1"/>
-        <line num="2" count="287" type="stmt"/>
-        <line num="10" count="287" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="531" type="stmt"/>
+        <line num="10" count="531" type="cond" truecount="2" falsecount="0"/>
         <line num="18" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="cond" truecount="0" falsecount="4"/>
